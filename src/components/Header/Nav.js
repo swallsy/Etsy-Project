@@ -9,23 +9,26 @@ export default class Nav extends Component {
         this.handleMouseLeave = this.handleMouseLeave.bind(this)
 
         this.state = {
-            isVisible: false
+            render: null
         }
     }
 
     handleMouseEnter(event) {
-        event.target.children[0].className = "dropdown-box show"
+        this.setState({})
+        {/*currently thinking about trying to set each dropdown as state. this.setState({render: function(){return(<ul> <li>All Jewelry</li> </ul>)})*/}
     }
 
     handleMouseLeave(event) {
-        event.target.children[0].className = "dropdown-box"
+        console.log(event);
+        this.setState({isVisible: false})
     }
 
     render() {
         return (
-            <ul>
+
+            {/*<ul>
                 <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Clothing & Accessories
-                    <ul className="dropdown-box">
+                    <ul className={(this.state.isVisible ? " show": "dropdown-box")}>
                         <li>Accessories
                             <ul>
                                 <li>Belts & Suspenders</li>
@@ -84,126 +87,7 @@ export default class Nav extends Component {
                         </li>
                     </ul>
                 </li>
-
-
-                <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Craft Supplies & Tools
-                    <ul className="dropdown-box">
-                        <li>Subcategory 1
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                        <li>Subcategory 2
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-
-
-                <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Weddings
-                    <ul className="dropdown-box">
-                        <li>Subcategory 1
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                        <li>Subcategory 2
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Entertainment
-                    <ul className="dropdown-box">
-                        <li>Subcategory 1
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                        <li>Subcategory 2
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Home & Living
-                    <ul className="dropdown-box">
-                        <li>Subcategory 1
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                        <li>Subcategory 2
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Kids & Baby
-                    <ul className="dropdown-box">
-                        <li>Subcategory 1
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                        <li>Subcategory 2
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <li onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} >Vintage
-                    <ul className="dropdown-box">
-                        <li>Subcategory 1
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                        <li>Subcategory 2
-                            <ul>
-                                <li>LI 1</li>
-                                <li>LI 2</li>
-                                <li>LI 3</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            </ul> */}
         )
     }
 
