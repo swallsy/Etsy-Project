@@ -1,9 +1,9 @@
-### Etsy Clone -- Homepage
+# Etsy Clone -- Homepage
 ## The Iron Yard Weekly Group Project
 
-## This is a large scale Project
+### This is a large scale Project
 
-## Description
+### Description
 This is a large scale, whole-class project.  
 The class was divided in to four-person teams and each team was given a page from Etsy to recreate.
 
